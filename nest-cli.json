@@ -90,6 +90,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/payment-processing/tsconfig.app.json"
       }
+    },
+    "photo-ai": {
+      "type": "application",
+      "root": "apps/photo-ai",
+      "entryFile": "main",
+      "sourceRoot": "apps/photo-ai/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/photo-ai/tsconfig.app.json"
+      }
     }
   }
 }
