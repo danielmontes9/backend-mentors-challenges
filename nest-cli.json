@@ -54,6 +54,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/todo-list/tsconfig.app.json"
       }
+    },
+    "jwt-authentication": {
+      "type": "application",
+      "root": "apps/jwt-authentication",
+      "entryFile": "main",
+      "sourceRoot": "apps/jwt-authentication/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/jwt-authentication/tsconfig.app.json"
+      }
     }
   }
 }
