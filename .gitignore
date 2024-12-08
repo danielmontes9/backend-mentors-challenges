@@ -1,54 +1,56 @@
-**/packages/*/package-lock.json
-**/sample/*/package-lock.json
+# compiled output
+/dist
+/node_modules
+/build
 
-# dependencies
-**/node_modules/
+# Logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
 
-# IDE
-**/.idea
-**/.awcache
-**/.vscode
-**/.devcontainer
-**/.classpath
-**/.project
-**/.settings
-**/*.code-workspace
+# OS
+.DS_Store
 
-# Vim
-[._]*.s[a-v][a-z]
-[._]*.sw[a-p]
-[._]s[a-rt-v][a-z]
-[._]ss[a-gi-z]
-[._]sw[a-p]
+# Tests
+/coverage
+/.nyc_output
 
-# bundle
-**/packages/**/*.d.ts
-**/packages/**/*.js
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
 
-# misc
-**/.DS_Store
-**/lerna-debug.log
-**/npm-debug.log
-**/yarn-error.log
-**/**/npm-debug.log
-**/packages/**/.npmignore
-**/packages/**/LICENSE
-**/*.tsbuildinfo
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 
-# example
-**/quick-start
-**/example_dist
-**/example
+# dotenv environment variable files
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
 
-# tests
-**/test
-**/benchmarks/memory
-**/coverage
-**/.nyc_output
-**/packages/graphql
-**/benchmarks/memory
-**/build/config\.gypi
+# temp directory
+.temp
+.tmp
 
-**/.npmrc
-**/pnpm-lock.yaml
-**/.history
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json

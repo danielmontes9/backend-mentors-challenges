@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/backend-mentors-challenges/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/backend-mentors-challenges/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/backend-mentors-challenges",
+  "projects": {
+    "backend-mentors-challenges": {
+      "type": "application",
+      "root": "apps/backend-mentors-challenges",
+      "entryFile": "main",
+      "sourceRoot": "apps/backend-mentors-challenges/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/backend-mentors-challenges/tsconfig.app.json"
+      }
+    },
+    "searching-image": {
+      "type": "application",
+      "root": "apps/searching-image",
+      "entryFile": "main",
+      "sourceRoot": "apps/searching-image/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/searching-image/tsconfig.app.json"
+      }
+    },
+    "advice-generator": {
+      "type": "application",
+      "root": "apps/advice-generator",
+      "entryFile": "main",
+      "sourceRoot": "apps/advice-generator/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/advice-generator/tsconfig.app.json"
+      }
+    },
+    "newsletter": {
+      "type": "application",
+      "root": "apps/newsletter",
+      "entryFile": "main",
+      "sourceRoot": "apps/newsletter/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/newsletter/tsconfig.app.json"
+      }
+    },
+    "todo-list": {
+      "type": "application",
+      "root": "apps/todo-list",
+      "entryFile": "main",
+      "sourceRoot": "apps/todo-list/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/todo-list/tsconfig.app.json"
+      }
+    },
+    "jwt-authentication": {
+      "type": "application",
+      "root": "apps/jwt-authentication",
+      "entryFile": "main",
+      "sourceRoot": "apps/jwt-authentication/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/jwt-authentication/tsconfig.app.json"
+      }
+    },
+    "therapist-ai": {
+      "type": "application",
+      "root": "apps/therapist-ai",
+      "entryFile": "main",
+      "sourceRoot": "apps/therapist-ai/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/therapist-ai/tsconfig.app.json"
+      }
+    },
+    "g-drive": {
+      "type": "application",
+      "root": "apps/g-drive",
+      "entryFile": "main",
+      "sourceRoot": "apps/g-drive/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/g-drive/tsconfig.app.json"
+      }
+    },
+    "payment-processing": {
+      "type": "application",
+      "root": "apps/payment-processing",
+      "entryFile": "main",
+      "sourceRoot": "apps/payment-processing/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/payment-processing/tsconfig.app.json"
+      }
+    },
+    "photo-ai": {
+      "type": "application",
+      "root": "apps/photo-ai",
+      "entryFile": "main",
+      "sourceRoot": "apps/photo-ai/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/photo-ai/tsconfig.app.json"
+      }
+    }
+  }
+}
