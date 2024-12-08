@@ -63,6 +63,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/jwt-authentication/tsconfig.app.json"
       }
+    },
+    "therapist-ai": {
+      "type": "application",
+      "root": "apps/therapist-ai",
+      "entryFile": "main",
+      "sourceRoot": "apps/therapist-ai/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/therapist-ai/tsconfig.app.json"
+      }
     }
   }
 }
