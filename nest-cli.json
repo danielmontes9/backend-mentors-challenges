@@ -27,6 +27,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/searching-image/tsconfig.app.json"
       }
+    },
+    "advice-generator": {
+      "type": "application",
+      "root": "apps/advice-generator",
+      "entryFile": "main",
+      "sourceRoot": "apps/advice-generator/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/advice-generator/tsconfig.app.json"
+      }
     }
   }
 }
