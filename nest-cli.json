@@ -81,6 +81,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/g-drive/tsconfig.app.json"
       }
+    },
+    "payment-processing": {
+      "type": "application",
+      "root": "apps/payment-processing",
+      "entryFile": "main",
+      "sourceRoot": "apps/payment-processing/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/payment-processing/tsconfig.app.json"
+      }
     }
   }
 }
