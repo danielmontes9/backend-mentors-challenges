@@ -36,6 +36,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/advice-generator/tsconfig.app.json"
       }
+    },
+    "newsletter": {
+      "type": "application",
+      "root": "apps/newsletter",
+      "entryFile": "main",
+      "sourceRoot": "apps/newsletter/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/newsletter/tsconfig.app.json"
+      }
     }
   }
 }
