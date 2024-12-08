@@ -72,6 +72,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/therapist-ai/tsconfig.app.json"
       }
+    },
+    "g-drive": {
+      "type": "application",
+      "root": "apps/g-drive",
+      "entryFile": "main",
+      "sourceRoot": "apps/g-drive/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/g-drive/tsconfig.app.json"
+      }
     }
   }
 }
