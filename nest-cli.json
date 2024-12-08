@@ -45,6 +45,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/newsletter/tsconfig.app.json"
       }
+    },
+    "todo-list": {
+      "type": "application",
+      "root": "apps/todo-list",
+      "entryFile": "main",
+      "sourceRoot": "apps/todo-list/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/todo-list/tsconfig.app.json"
+      }
     }
   }
 }
