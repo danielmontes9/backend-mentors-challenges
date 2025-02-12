@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Query } from '@nestjs/common';
 import { AdviceGeneratorService } from './advice-generator.service';
 
 @Controller()
@@ -10,5 +10,10 @@ export class AdviceGeneratorController {
   @Get('advice')
   getHello(): string {
     return this.adviceGeneratorService.getHello();
+  }
+
+  @Get('random')
+  async getRandomPhoto(@Query('query') query?: string) {
+    return this.adviceGeneratorService.getRandomPhoto(query);
   }
 }
