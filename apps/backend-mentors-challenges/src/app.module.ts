@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { AdviceGeneratorService } from 'apps/advice-generator/src/advice-generator.service';
-import { AdviceGeneratorController } from 'apps/advice-generator/src/advice-generator.controller';
 import { ConfigModule } from '@nestjs/config';
 import { HttpModule } from '@nestjs/axios';
+import { SearchingImageController } from 'apps/searching-image/src/searching-image.controller';
+import { SearchingImageService } from 'apps/searching-image/src/searching-image.service';
 
 @Module({
   imports: [
@@ -14,7 +14,7 @@ import { HttpModule } from '@nestjs/axios';
     }),
     HttpModule,
   ],
-  controllers: [AppController, AdviceGeneratorController],
-  providers: [AppService, AdviceGeneratorService],
+  controllers: [AppController, SearchingImageController],
+  providers: [AppService, SearchingImageService],
 })
 export class AppModule {}
