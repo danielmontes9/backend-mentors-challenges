@@ -17,6 +17,15 @@ export class SearchingImageService {
     return 'Hello World!';
   }
 
+  async getPhotosList(): Promise<any> {
+    const accessKey = this.configService.get<string>('UNSPLASH_ACCESS_KEY');
+
+    const url = `${this.UNSPLASH_URL}/photos?client_id=${accessKey}`;
+
+    const response = await firstValueFrom(this.httpService.get(url));
+    return response.data;
+  }
+
   async getRandomPhoto(query?: string): Promise<any> {
     const accessKey = this.configService.get<string>('UNSPLASH_ACCESS_KEY');
 

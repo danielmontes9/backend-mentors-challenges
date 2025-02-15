@@ -11,6 +11,11 @@ export class SearchingImageController {
     return this.searchingImageService.getHello();
   }
 
+  @Get('list')
+  async getPhotosList() {
+    return this.searchingImageService.getPhotosList();
+  }
+
   @Get('random')
   async getRandomPhoto(@Query('query') query?: string) {
     console.log('query', query);
