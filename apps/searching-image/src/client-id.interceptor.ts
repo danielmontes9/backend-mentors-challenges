@@ -1,27 +1,27 @@
-import {
-  CallHandler,
-  ExecutionContext,
-  Injectable,
-  NestInterceptor,
-} from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
+import { HttpService } from '@nestjs/axios';
 import { ConfigService } from '@nestjs/config';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+// import { AxiosRequestConfig } from 'axios';
 
 @Injectable()
-export class ClientIdInterceptor implements NestInterceptor {
-  private readonly accessKey = this.configService.get<string>(
-    'UNSPLASH_ACCESS_KEY',
-  );
+export class ClientIdInterceptor {
+  constructor(
+    private readonly httpService: HttpService,
+    private readonly configService: ConfigService,
+  ) {
+    this.setupInterceptor();
+  }
 
-  constructor(private readonly configService: ConfigService) {}
+  private setupInterceptor() {
+    const accessKey = this.configService.get<string>('UNSPLASH_ACCESS_KEY');
 
-  intercept(context: ExecutionContext, next: CallHandler): Observable<any> {
-    const request = context.switchToHttp().getRequest();
+    this.httpService.axiosRef.interceptors.request.use((config: any) => {
+      if (!config.params) {
+        config.params = {};
+      }
 
-    const separator = request.url.includes('?') ? '&' : '?';
-    request.url = `${request.url}${separator}client_id=${this.accessKey}`;
-
-    return next.handle().pipe(map((data) => data));
+      config.params['client_id'] = accessKey;
+      return config;
+    });
   }
 }

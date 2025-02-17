@@ -1,6 +1,5 @@
 import { Controller, Get, Param, Query } from '@nestjs/common';
 import { SearchingImageService } from './searching-image.service';
-// import { ApiOperation, ApiParam } from '@nestjs/swagger';
 
 @Controller('search-image')
 export class SearchingImageController {
@@ -18,7 +17,6 @@ export class SearchingImageController {
 
   @Get('random')
   async getRandomPhoto(@Query('query') query?: string) {
-    console.log('query', query);
     return this.searchingImageService.getRandomPhoto(query);
   }
 
