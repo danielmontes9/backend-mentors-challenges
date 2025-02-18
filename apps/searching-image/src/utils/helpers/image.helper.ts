@@ -1,0 +1,16 @@
+import { ImageModelDto } from '../../models/image.model.dto';
+
+export const formatImageData = (data: any): ImageModelDto => {
+  return {
+    id: data.id,
+    alt_description: data.alt_description,
+    views: data.views,
+    downloads: data.downloads,
+    width: data.width,
+    height: data.height,
+    tags: data.tags,
+    topics: data.topics,
+    urls: data.urls,
+    links: data.links,
+  };
+};
