@@ -34,10 +34,10 @@ export class SearchingImageService {
     return formatImageData(response.data);
   }
 
-  async getPhotoById(id: string): Promise<any> {
+  async getPhotoById(id: string): Promise<ImageModelDto> {
     const url = `${this.UNSPLASH_URL}/photos/${id}`;
 
     const response = await firstValueFrom(this.httpService.get(url));
-    return response.data;
+    return formatImageData(response.data);
   }
 }
