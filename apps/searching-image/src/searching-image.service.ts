@@ -3,7 +3,10 @@ import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { firstValueFrom } from 'rxjs';
 import { ImageModelDto } from './models/image.model.dto';
-import { formatImageData } from './utils/helpers/image.helper';
+import {
+  formatImageArrayData,
+  formatImageData,
+} from './utils/helpers/image.helper';
 
 @Injectable()
 export class SearchingImageService {
@@ -19,11 +22,11 @@ export class SearchingImageService {
     return 'Hello World!';
   }
 
-  async getPhotosList(): Promise<any> {
+  async getPhotosList(): Promise<ImageModelDto[]> {
     const url = `${this.UNSPLASH_URL}/photos`;
 
     const response = await firstValueFrom(this.httpService.get(url));
-    return response.data;
+    return formatImageArrayData(response.data);
   }
 
   async getRandomPhoto(query?: string): Promise<ImageModelDto> {

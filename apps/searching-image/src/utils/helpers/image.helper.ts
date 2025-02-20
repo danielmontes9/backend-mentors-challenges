@@ -15,3 +15,9 @@ export const formatImageData = (data: ImageModelDao): ImageModelDto => {
     links: data.links,
   };
 };
+
+export const formatImageArrayData = (
+  data: ImageModelDao[],
+): ImageModelDto[] => {
+  return data.map((item) => formatImageData(item));
+};
