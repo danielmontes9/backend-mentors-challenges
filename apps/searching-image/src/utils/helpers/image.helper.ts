@@ -1,5 +1,5 @@
-import { ImageModelDao } from '../../models/image.model.dao';
-import { ImageModelDto } from '../../models/image.model.dto';
+import { ImageModelDao } from '../../data/models/image.model.dao';
+import { ImageModelDto } from '../../data/models/image.model.dto';
 
 export const formatImageData = (data: ImageModelDao): ImageModelDto => {
   return {

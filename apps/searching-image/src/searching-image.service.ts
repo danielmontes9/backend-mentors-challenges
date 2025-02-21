@@ -2,7 +2,7 @@ import { HttpService } from '@nestjs/axios';
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { firstValueFrom } from 'rxjs';
-import { ImageModelDto } from './models/image.model.dto';
+import { ImageModelDto } from './data/models/image.model.dto';
 import {
   formatImageArrayData,
   formatImageData,
