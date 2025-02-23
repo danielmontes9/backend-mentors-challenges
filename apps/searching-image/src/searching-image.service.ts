@@ -7,6 +7,7 @@ import {
   formatImageArrayData,
   formatImageData,
 } from './utils/helpers/image.helper';
+import { StadisticsModel } from './data/models/stadistics.model';
 
 @Injectable()
 export class SearchingImageService {
@@ -33,7 +34,6 @@ export class SearchingImageService {
     const url = `${this.UNSPLASH_URL}/photos/random?query=${query || ''}&`;
 
     const response = await firstValueFrom(this.httpService.get(url));
-
     return formatImageData(response.data);
   }
 
@@ -42,5 +42,12 @@ export class SearchingImageService {
 
     const response = await firstValueFrom(this.httpService.get(url));
     return formatImageData(response.data);
+  }
+
+  async getPhotoStadistics(id: string): Promise<StadisticsModel> {
+    const url = `${this.UNSPLASH_URL}/photos/${id}/statistics`;
+
+    const response = await firstValueFrom(this.httpService.get(url));
+    return response.data;
   }
 }

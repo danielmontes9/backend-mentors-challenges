@@ -24,4 +24,9 @@ export class SearchingImageController {
   async getPhotoById(@Param('id') id: string) {
     return this.searchingImageService.getPhotoById(id);
   }
+
+  @Get(':id/stadistics')
+  async getPhotoStadistics(@Param('id') id: string) {
+    return this.searchingImageService.getPhotoStadistics(id);
+  }
 }
