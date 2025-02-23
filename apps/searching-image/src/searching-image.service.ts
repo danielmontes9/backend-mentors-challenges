@@ -50,4 +50,11 @@ export class SearchingImageService {
     const response = await firstValueFrom(this.httpService.get(url));
     return response.data;
   }
+
+  async downloadPhoto(id: string): Promise<string> {
+    const url = `${this.UNSPLASH_URL}/photos/${id}/download`;
+
+    const response = await firstValueFrom(this.httpService.get(url));
+    return response.data.url;
+  }
 }
