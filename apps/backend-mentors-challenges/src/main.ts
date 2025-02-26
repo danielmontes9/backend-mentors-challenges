@@ -19,8 +19,8 @@ async function bootstrap() {
   app.use(helmet());
 
   const config = new DocumentBuilder()
-    .setTitle('API de Ejemplo')
-    .setDescription('Documentación de la API usando Swagger')
+    .setTitle('API Backend Mentors Challenges')
+    .setDescription('Documentation of the API Backend Mentors Challenges')
     .setVersion('1.0')
     .build();
 
